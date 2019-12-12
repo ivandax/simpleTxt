@@ -1,0 +1,95 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.settings{
+    @include flex-complete($direction: column, $justify: flex-start, $align: center);
+
+    background-color: $lightgray;
+    padding: 0.8rem;
+    height:100vh;
+
+    form{
+        @include flex-complete($direction: column, $justify: flex-start, $align: flex-start);
+
+        background-color: white;
+        border-radius: 4px;
+        box-shadow: $boxShadowLarge;
+        width:18rem;
+        padding: 1rem;
+
+        @media only screen and (min-width:$tablet){
+            margin-top:1rem;
+            width: 25rem;
+        }
+
+        @media only screen and (min-width:$tablet){
+            margin-top:2rem;
+            width: 35rem;
+        }
+
+        img{
+            width:5rem;
+            margin-left: 2rem;
+
+        }
+
+        input{
+            padding: 0.5rem;
+            border-radius: 4px;
+            margin-left:0.5rem;
+        }
+
+        .progressBarBase{
+            background-color: lightgray;
+            height: 16px;
+            width: 100px;
+            border-radius: 4px;
+            margin-left:0.8rem;
+
+            .progressBar{
+                @extend .progressBarBase;
+                background-color: blue;
+                color: white;
+                margin-left: 0;
+            }
+        }
+
+        .displayPercent{
+            margin-left: 0.8rem;
+        }
+
+
+
+        textarea{
+            padding:0.5rem;
+            border-radius:4px;
+            margin-left:0.5rem;
+            width: 90%;
+            min-height: 8rem;
+        }
+
+        label{
+            padding: 0.3rem;
+            font-style: italic;
+            margin-top:0.3rem;
+            margin-bottom:0.3rem;
+        }
+
+        button{
+            color:white;
+            background-color: $main;
+            font-weight: bold;
+            border-radius: 4px;
+            padding: 0.3rem;
+            margin: 1rem;
+            align-self: flex-end;
+            
+        }
+
+        .error{
+            color: red;
+            margin-left: 2rem;
+        }
+    }
+
+}

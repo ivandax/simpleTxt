@@ -1,0 +1,66 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.profile{
+    @include flex-complete($direction: column, $justify: flex-start, $align: center);
+
+    background-color: $lightgray;
+    padding: 0.8rem;
+    height: 100vh;
+
+    .detailsContainer{
+        @include flex-complete($direction: column, $justify: flex-start, $align: center);
+
+        width:90%;
+        box-shadow: $boxShadowLarge;
+        border-radius:4px;
+
+        @media only screen and (min-width: $tablet){
+            width:80%;
+        }
+
+        @media only screen and (min-width: $desktop){
+            width:70%;
+        }
+
+        .bio{
+            margin-top:0.3rem;
+            padding: 0.5rem 0.5rem 0.5rem 1rem;
+            background-color:white;
+            border-radius: 4px;
+            width:100%;
+
+            h3{
+                font-weight: bold;
+            }
+        }
+
+        .setting_area{
+            @include flex-complete($direction: row, $justify: space-between, $align: flex-start);
+
+            background-color:white;
+            padding:1rem;
+            width:100%;
+
+            button{
+                background-color: $lightmain;
+                color:white;
+                padding: 0.4rem;
+                border-radius:4px;
+                margin-top:0.3rem;
+                width:7rem;
+            }
+
+            .buttonStyle{
+                color:$lightmain;
+                padding:0.3rem;
+                border-radius:4px;
+                margin-top:0.3rem;
+                width:7rem;
+                text-align: center;
+            }
+
+        }
+    
+    }
+}

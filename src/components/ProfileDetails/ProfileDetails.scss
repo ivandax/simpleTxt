@@ -1,0 +1,55 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.profileDetails{
+    @include flex-complete($direction: column, $justify: flex-start, $align: flex-start);
+
+    background-color: white;
+    width:100%;
+    border-radius: 4px;
+
+    img{
+        border-radius: 50%;
+        margin: 1rem;
+    }
+
+    h3{
+        padding-left: 1rem;
+        padding-top:0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    p{
+        padding-left: 1rem;
+        font-style: italic;
+        padding-top:0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .counts{
+        padding-left: 1rem;
+        width: 100%;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+
+        span{
+            padding-left: 0.3rem;
+            padding-right: 0.3rem;
+        }
+
+        hr{
+            width: 90%;
+            margin-top:1rem;
+            margin-bottom:1rem;
+        }
+
+        .countsLabel{
+            font-weight: bold;
+        }
+
+        .countsDetails{
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+    }
+}

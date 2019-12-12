@@ -1,0 +1,13 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.search{
+    @include flex-complete($direction: column, $justify: flex-start, $align: center);
+
+    background-color: lightgrey;
+
+    @media only screen and (min-width:$desktop){
+        @include flex-complete($direction: row, $justify: flex-start, $align: flex-start);
+    }
+
+}

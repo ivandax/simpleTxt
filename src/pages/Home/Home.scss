@@ -1,0 +1,29 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.home{
+    @include flex-complete($direction: row, $justify: center, $align: flex-start);
+
+    background-color: lightgray;
+
+    @media only screen and (min-width:$desktop){
+        @include flex-complete($direction: row, $justify: flex-start, $align: flex-start);
+    }
+
+    .homeMain{
+        @include flex-complete($direction: column, $justify: flex-start, $align: flex-start);
+
+        width: 95%;
+
+        @media only screen and (min-width:$tablet){
+            margin: 1rem;
+            width: 90%;
+        }
+
+        @media only screen and (min-width:$desktop){
+            margin: 1.5rem;
+            border-radius: 5px;
+            width: 60%;
+        }
+    }
+}

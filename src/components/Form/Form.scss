@@ -1,0 +1,52 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.input_form{
+    @include flex-complete($direction: row, $justify: flex-start, $align: flex-start);
+
+    padding: 0.6rem;
+    background-color: white;
+    width:100%;
+    border-radius:5px;
+    margin-bottom: 0.5rem;
+    margin-top:0.5rem;
+    box-shadow: 3px 3px 6px 3px rgba(0,0,0,0.2), 3px 3px 12px 3px rgba(0,0,0,0.19);
+
+    @media only screen and (min-width:$desktop){
+        margin-bottom:1rem;
+        margin-top: 0;
+    }
+
+    textarea{
+        width:70%;
+        margin-right:0.5rem;
+        border-radius: 5px;
+        padding:0.3rem;
+        outline:none; //removes the blue glow around textarea
+        overflow: hidden;
+
+        line-height: 20px;
+        transition: width 0.3s;
+    }
+
+    div.input_length{
+        width:2rem;
+        padding: 0.3rem;
+        margin-right:0.2rem;
+    }
+
+    button{
+        background-color:$main;
+        color:white;
+        font-weight: bold;
+        padding:0.5rem;
+        border-radius: 10px;
+        width:4rem;
+        @media only screen and (min-width: $tablet){
+            width:8rem;
+        }
+        @media only screen and (min-width: $desktop){
+            width:9rem;
+        }
+    }
+}

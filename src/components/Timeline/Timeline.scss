@@ -1,0 +1,11 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.timeline{
+    @include flex-complete($direction: column, $justify: flex-start, $align: flex-start);
+
+    background-color: lightgray;
+    width:100%;
+    border-radius:5px;
+
+}

@@ -6,7 +6,7 @@ const SearchForm = ({getSearchString}) => {
     
     const onSearch = (event) => {
         event.preventDefault();
-        console.log("nothing happens...")
+        getSearchString('');
     }
 
     const handleSearchChange = (event) => {
@@ -17,7 +17,7 @@ const SearchForm = ({getSearchString}) => {
     return (
         <form className="searchForm" onSubmit={onSearch}>
             <input type="text" placeholder="Enter username..." maxLength="15" onChange={handleSearchChange}/>
-            <button type="submit">Search</button>            
+            <button type="submit">Reset</button>            
         </form>
     )
 }

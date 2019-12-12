@@ -24,4 +24,13 @@ const uploadFile = (file, setFileUploadPercent) => {
     });
 }
 
-export default uploadFile;
+const getDefaultPic = async (fileName='github.png') => {
+    const storageRef = firebase.storage().ref().child(`pics/${fileName}`);
+    const pic = await storageRef.getDownloadURL()
+    return pic;
+}
+
+export {
+    uploadFile, 
+    getDefaultPic
+};

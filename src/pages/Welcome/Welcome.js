@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import {Link} from 'react-router-dom';
 
+//import { useDispatch, useSelector } from 'react-redux';
+
 import FormInput from '../../components/FormInput';
 import Brand from '../../components/Brand';
 
@@ -11,11 +13,14 @@ const Welcome = ({history}) => {
 
     const [formData, setFormData] = useState({ email: '', password: ''});
     const [error, setError] = useState('');
+    //const profile = useSelector(state=>state.user);
+    //const dispatch = useDispatch();
 
     const [displayLogo, setDisplayLogo] = useState('');
     useEffect( () =>{
         setDisplayLogo("display");
     }, []);
+
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -28,7 +33,7 @@ const Welcome = ({history}) => {
         } else{
             const result = await login(email, password);
             if(result){
-                history.push('/');
+                history.push('/Home');
             }
         }
     }

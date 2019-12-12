@@ -60,8 +60,7 @@ const Post = ({postData}) => {
                         <button onClick={toggleLikeMe} className={`like ${ amLiked ? 'liked' : ''}`}>★</button>
                         <span>{postData.likedBy ? postData.likedBy.length : 0}</span>
                     </>}
-                </div>
-                <hr />             
+                </div>            
             </div>
         </div>
     )

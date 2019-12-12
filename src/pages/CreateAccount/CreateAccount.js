@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 import { signup, registerAuthObserver } from '../../services/auth';
 
 import { addItemWithId, getItem } from '../../services/database';
+import { getDefaultPic } from '../../services/storage';
 
 import FormInput from '../../components/FormInput';
 import Brand from '../../components/Brand';
@@ -30,21 +31,23 @@ const CreateAccount = ({history}) => {
                 console.log("user is", user);
                 const profile = await getItem('profiles', user.uid);
                 if(!profile){
+                    const defaultPic = await getDefaultPic();
                     const result = await addItemWithId(
                         'profiles',
-                        {name: formData.name, 
-                        email: formData.email,
-                        bio: 'Your bio will display here, Edit Profile to modify it.',
-                        following: [user.uid],
-                        followers: [],
-                        likes: 0,
-                        posts:0,
-                        pic: 'https://firebasestorage.googleapis.com/v0/b/simpletxt-post.appspot.com/o/pics%2Fgithub.png?alt=media&token=93f31662-3c17-4b4b-9a13-dcb0ad104545'
+                        {
+                            name: formData.name, 
+                            email: formData.email,
+                            bio: 'Your bio will display here, Edit Profile to modify it.',
+                            following: [user.uid],
+                            followers: [],
+                            likes: 0,
+                            posts:0,
+                            pic: defaultPic
                         },
                         user.uid
                     );
                     if(result){
-                        history.push('/Home');
+                        history.push('/');
                     }
                 }
             }

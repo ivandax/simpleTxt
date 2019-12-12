@@ -7,7 +7,7 @@ import FormInput from '../../components/FormInput';
 import FormTextArea from '../../components/FormTextArea';
 
 import { getItem, updateItemMerge } from '../../services/database';
-import uploadFile  from '../../services/storage';
+import {uploadFile}  from '../../services/storage';
 
 import './Settings.scss';
 import 'react-image-crop/lib/ReactCrop.scss'

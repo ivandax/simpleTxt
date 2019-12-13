@@ -9,11 +9,11 @@ import Form from '../Form';
 import "./Post.scss";
 
 const Post = ({postData}) => {
-
     const profile = useSelector(state=>state.user);
     const [showClass, setShowClass] = useState('');
     const [amLiked, setAmLiked] = useState(false);
     const [displayReplyForm, setDisplayReplyForm] = useState(false);
+    const [displayReplies, setDisplayReplies] = useState(false);
 
     const toggleDelete = () => {
         showClass === '' ? setShowClass("show") : setShowClass("");
@@ -39,8 +39,21 @@ const Post = ({postData}) => {
         }
     }
 
-    const setPost = (postData) => {
-        console.log(postData);
+    const setPost = async (replyData) => {
+        const modifiedReplyData = {...replyData, name : profile.name, pic: profile.pic}
+        const thisPost = await getItem('posts', postData.postId);
+        const thisPostReplies = [...thisPost.replies];
+        thisPostReplies.push(modifiedReplyData);
+        const result = await updateItemMerge('posts', {replies: thisPostReplies}, postData.postId);
+        result && setDisplayReplies(true) && setDisplayReplyForm(false);
+    }
+
+    const handleReplyAttempt = () => {
+        displayReplyForm ? setDisplayReplyForm(false) : setDisplayReplyForm(true);
+    }
+
+    const toggleShowReplies = () => {
+        displayReplies ? setDisplayReplies(false) : setDisplayReplies(true);
     }
 
     return (
@@ -63,17 +76,28 @@ const Post = ({postData}) => {
                         </>
                         :
                         <>
-                            <button>➧</button>
-                            <span>{postData.replies ? postData.replies.length : 0}</span>
+                            <button onClick={handleReplyAttempt}>➧</button>
+                            <span onClick={toggleShowReplies}>{postData.replies ? postData.replies.length : 0}</span>
                             <button onClick={toggleLikeMe} className={`like ${ amLiked ? 'liked' : ''}`}>★</button>
                             <span>{postData.likedBy ? postData.likedBy.length : 0}</span>
                         </>}
                     </div>            
                 </div>
             </div>
-            {/* <div className="replyArea">
+            <div className={`replyForm ${displayReplyForm ? 'show' : ''}`}>
                 <Form setPost={setPost} buttonText={'Reply'}/>
-            </div> */}
+            </div>
+            {postData.replies.length>0 && <div className={`replies ${displayReplies ? 'show' : ''}`}>
+                {postData.replies.map( (reply) => {
+                    console.log(reply);
+                return <div key={reply.timestamp+reply.profileId} className="reply">
+                    <img src={reply.pic} alt={reply.name}/>
+                    <div>
+                        <span>{`${reply.name} replied:`}</span>
+                        <p>{reply.content}</p></div>
+                    </div>
+                })}
+            </div>}
         </>
     )
 }

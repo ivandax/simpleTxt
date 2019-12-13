@@ -101,8 +101,38 @@
 
 }
 
-.replyArea{
+.replyForm{
     width:90%;
     align-self: flex-end;
+    display: none;
+
+    &.show{
+        display: block;
+    }
 }
 
+.replies{
+    width:100%;
+    align-self: flex-end;
+    display: none;
+
+    &.show{
+        @include flex-complete($direction: column, $justify: flex-start, $align: flex-end);
+    }
+
+    .reply{
+        @extend .post;
+        width:90%;
+        padding: 0.3rem;
+
+        div{
+            @include flex-complete($direction: column, $justify: flex-start, $align: flex-start);
+            span{
+                font-weight: bold;
+            }
+            p{
+                margin-bottom:0.3rem;
+            }
+        }
+    }
+}

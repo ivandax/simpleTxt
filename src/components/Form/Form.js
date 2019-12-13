@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 
 import './Form.scss'
 
-const Form = ({setPost}) => {
+const Form = ({setPost, buttonText}) => {
     
     const profile = useSelector(state=>state.user);
 
@@ -44,7 +44,7 @@ const Form = ({setPost}) => {
         <form className="input_form" onSubmit={handleSubmit}>
             <textarea name="input" value={input} maxLength="150" placeholder="Enter post here" onChange={handleTextChange} style={{height:textHeight}}></textarea>
             <div className="input_length">{inputLength}</div>
-            <button type="submit">Post</button>
+            <button type="submit">{buttonText}</button>
         </form>
     )
 }

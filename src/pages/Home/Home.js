@@ -56,7 +56,7 @@ const Home = () => {
         <ProfileViewer/>
         <Overlay/>
         <div className="homeMain">
-          <Form setPost={setPost} />
+          <Form setPost={setPost} buttonText={'Post'}/>
           <Timeline />
         </div>
       </div>

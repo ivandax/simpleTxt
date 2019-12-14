@@ -16,7 +16,7 @@ const SearchForm = ({getSearchString}) => {
 
     return (
         <form className="searchForm" onSubmit={onSearch}>
-            <input type="text" placeholder="Entername" maxLength="15" onChange={handleSearchChange}/>
+            <input type="text" placeholder="Enter name" maxLength="40" onChange={handleSearchChange}/>
             <button type="submit">Reset</button>            
         </form>
     )

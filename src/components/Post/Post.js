@@ -71,6 +71,10 @@ const Post = ({postData}) => {
                     <div className="interactions">
                         {postData.profileId === profile.id ?
                         <>
+                            <span>Replies:</span>
+                            <span onClick={toggleShowReplies}>{postData.replies ? postData.replies.length : 0}</span>
+                            <span>Likes:</span>
+                            <span>{postData.likedBy ? postData.likedBy.length : 0}</span>
                             <button className={`delete ${showClass}`} onClick={deleteMe}>Delete</button>
                             <button className="options" onClick={toggleDelete}>☰</button>
                         </>

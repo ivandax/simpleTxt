@@ -33,7 +33,6 @@ const Welcome = ({history}) => {
         } else{
             const result = await login(email, password);
             if(result){
-                console.log("on welcome, ",result)
                 const initialProfile = await getItem('profiles', result);
                 if(initialProfile){
                     dispatch(setUser(initialProfile));

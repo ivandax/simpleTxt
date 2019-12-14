@@ -5,6 +5,7 @@
     @include flex-complete($direction: row, $justify: center, $align: flex-start);
 
     background-color: lightgray;
+    height: 100vh;
 
     @media only screen and (min-width:$desktop){
         @include flex-complete($direction: row, $justify: flex-start, $align: flex-start);

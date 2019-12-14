@@ -46,12 +46,11 @@ const CreateAccount = ({history}) => {
                         },
                         user.uid
                     );
-                    if(result){
+                    if(result)
                         history.push('/');
                     }
                 }
-            }
-        })
+            })
 
         return () => {
             cancelObserver();

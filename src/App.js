@@ -67,7 +67,7 @@ const App = () => {
           {profile && <Route path="/Search"><Search/></ Route>}
           {profile && <Route path="/Profile" component={Profile}></ Route>}
           {profile && <Route path="/Settings" component={Settings}></ Route>}
-          {profile && <Route path="/Home"><Home/></ Route>}
+          {profile && <Route path="/Home" component={Home}></ Route>}
 
           {defaultRoute};
 

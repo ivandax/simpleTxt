@@ -9,7 +9,7 @@ function signup(email, password){
 
 async function login(email,password){
     const result = await firebase.auth().signInWithEmailAndPassword(email,password);
-    return !!result; //returns true if successful
+    return result.user.uid; //returns true if successful
 }
 
 function logout(){

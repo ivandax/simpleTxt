@@ -89,7 +89,6 @@ const Post = ({postData}) => {
             </div>
             {postData.replies.length>0 && <div className={`replies ${displayReplies ? 'show' : ''}`}>
                 {postData.replies.map( (reply) => {
-                    console.log(reply);
                 return <div key={reply.timestamp+reply.profileId} className="reply">
                     <img src={reply.pic} alt={reply.name}/>
                     <div>

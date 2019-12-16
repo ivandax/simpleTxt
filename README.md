@@ -1,3 +1,11 @@
+### SimpleTxt
+
+![alt text](http://ivandax.com/images/logo.JPG)
+
+## Social Media App focusing on simple text posting.
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

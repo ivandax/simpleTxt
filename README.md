@@ -10,7 +10,7 @@ Have you ever felt overwhelmed by the amount of content that traditional social 
 
 ### Functional Description
 
-This app allows users to create their accounts, log in, and start making short, 150 character posts on their timelines. The user can go to the "Search" page to find other available users and "follow" them. Doing so will add their posts to the user's timeline. The user can make new posts, like posts made by other users, and reply to those posts. Follower, following, likes and post counts are updated in real time.
+This app allows users to create their accounts, log in, and start making short, 150 character posts on their timelines. The user can go to the "Search" page to find other available users and "follow" them. Doing so will add their posts to the user's timeline. The user can make new posts, "Like" posts made by other users, and reply to those posts. Follower, following, likes and post counts are updated in real time.
 
 The users can go to the "Profile" page to see her/his profile details, and access the "Settings" page to alter their name, bio or profile photo.
 
@@ -34,11 +34,11 @@ Welcome Page:
 
 ![alt text](http://ivandax.com/images/simpletxt/welcome1.JPG)
 
-Welcome Page on Desktop:
+Home Page on Desktop:
 
 ![alt text](http://ivandax.com/images/simpletxt/homeDesktop.JPG)
 
-Welcome Page on Mobile:
+Home Page on Mobile:
 
 ![alt text](http://ivandax.com/images/simpletxt/HomeMobile.JPG)
 

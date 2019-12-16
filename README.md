@@ -18,11 +18,11 @@ The users can go to the "Profile" page to see her/his profile details, and acces
 
 User interaction with SimpleTxt:
 
-![alt text](http://ivandax.com/images/simpletxt/technical.JPG)
+![alt text](http://ivandax.com/images/simpletxt/functional.JPG)
 
 ### Technical Description
 
-##Data Model
+Data Model
 
 In the diagram below we can see the schemas used:
 
@@ -44,7 +44,7 @@ Welcome Page on Mobile:
 
 Search Page on Mobile:
 
-![alt text](http://ivandax.com/images/simpletxt/SearchMobile.JPG)
+![alt text](http://ivandax.com/images/simpletxt/searchMobile.JPG)
 
 Profile Page on Desktop:
 

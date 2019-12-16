@@ -62,10 +62,10 @@ const Post = ({postData}) => {
                 <img src={postData.pic} alt="avatar"/>
                 <div className="postContent">
                     <div className="userData">
-                    <span className="username">{postData.name}</span>
-                    <span className="postDate">
-                        {(new Date(postData.timestamp)).toLocaleDateString()}
-                    </span>
+                        <span className="username">{postData.name}</span>
+                        <span className="postDate">
+                            {(new Date(postData.timestamp)).toLocaleDateString()}
+                        </span>
                     </div>
                     <p className="postText">{postData.content}</p>
                     <div className="interactions">

@@ -36,5 +36,6 @@ const userUnlikes = async (postId, posterId, loggedUserId, callback) => {
 
 export {
     userLikes,
-    userUnlikes
+    userUnlikes,
+    getProfileLikeCount
 }

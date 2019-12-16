@@ -11,7 +11,7 @@ const data1 = {
 describe('TRIAL', () => {
     it('Skylab - Frontend Course', () => {
       const wrapper = shallow(<Trial data={data1} />);
-      console.log(wrapper.debug())
+      //console.log(wrapper.debug())
       const trial = <div><div>Skylab</div><p>Frontend Course</p></div>
       expect(wrapper.contains(trial)).toEqual(true);
     });

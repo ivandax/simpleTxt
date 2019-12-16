@@ -1,6 +1,6 @@
 ### SimpleTxt
 
-![alt text](http://ivandax.com/images/logo.JPG)
+![alt text](http://ivandax.com/images/simpletxt/logo.JPG)
 
 Go to Simpletxt! (https://simpletxt-post.firebaseapp.com/)
 
@@ -18,21 +18,39 @@ The users can go to the "Profile" page to see her/his profile details, and acces
 
 User interaction with SimpleTxt:
 
+![alt text](http://ivandax.com/images/simpletxt/technical.JPG)
+
+### Technical Description
+
+##Data Model
+
+In the diagram below we can see the schemas used:
+
+![alt text](http://ivandax.com/images/simpletxt/dataModel.JPG)
 
 ## DESIGN (screenshots)
 
 Welcome Page:
 
-![alt text](http://ivandax.com/images/welcome1.JPG)
+![alt text](http://ivandax.com/images/simpletxt/welcome1.JPG)
 
 Welcome Page on Desktop:
 
-![alt text](http://ivandax.com/images/homeDesktop.JPG)
+![alt text](http://ivandax.com/images/simpletxt/homeDesktop.JPG)
 
 Welcome Page on Mobile:
 
-![alt text](http://ivandax.com/images/homeMobile.JPG)
+![alt text](http://ivandax.com/images/simpletxt/HomeMobile.JPG)
 
+Search Page on Mobile:
+
+![alt text](http://ivandax.com/images/simpletxt/SearchMobile.JPG)
+
+Profile Page on Desktop:
+
+![alt text](http://ivandax.com/images/simpletxt/ProfileDesktop.JPG)
+
+## Development info:
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

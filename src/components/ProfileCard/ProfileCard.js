@@ -26,6 +26,7 @@ const ProfileCard = ({profileData}) => {
     }, [profile, profileData.id])
 
     const toggleFollow = async () => {
+        
         if(!amFollowed){
             userFollows(profile.id, profileData.id, setAmFollowed);
         } else{

@@ -31,7 +31,6 @@ async function updateItemMerge(collection, item, id){
 async function getItem(collection, itemId) {
     const db = getDbInstance();
     const document = await db.collection(collection).doc(itemId).get();
-
     if(document.exists){
         return parseDoc(document);
     }

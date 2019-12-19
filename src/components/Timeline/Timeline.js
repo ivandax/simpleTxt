@@ -33,11 +33,12 @@ const Timeline = () => {
                     if(userProfiles){
                         //console.log(userProfiles)
                         const selectedUser = filterByUser(userProfiles, data.profileId);
-                        //console.log(selectedUser.id)
-                        if(profile.following.includes(selectedUser.id)){
-                            const { name, pic } = selectedUser;
-                            results.push({...data, name, pic, postId});
-                        }                        
+                        if(selectedUser){
+                            if(profile.following.includes(selectedUser.id)){
+                                const { name, pic } = selectedUser;
+                                results.push({...data, name, pic, postId});
+                            }   
+                        }                  
                     }
                 });
                 setPosts(results)

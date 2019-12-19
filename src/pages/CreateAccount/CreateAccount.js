@@ -42,7 +42,8 @@ const CreateAccount = ({history}) => {
                             followers: [],
                             likes: 0,
                             posts:0,
-                            pic: defaultPic
+                            pic: defaultPic,
+                            id: user.uid
                         },
                         user.uid
                     );

@@ -32,17 +32,18 @@ describe("Post trials", () => {
 
     function WithProvider() {
         return (
-            <div>
-                <Provider store={store}>
-                    <Post postData={postData_1}/>
-                </Provider>
-            </div>
+            // <div>
+            //     <Provider store={store}>
+            //         <Post postData={postData_1}/>
+            //     </Provider>
+            // </div>
+            <Post Provider={Provider} store={store} postData={postData_1}/>
         );
       }
   
     it("Contains expected data", () => {
         wrapper = shallow(<WithProvider />);
-        console.log(wrapper.debug({verbose:true}));
+        console.log(wrapper.debug());
         // const post = <>
         //     <div className='post'>
         //         <img src='someURL' alt='avatar' />
@@ -59,6 +60,7 @@ describe("Post trials", () => {
         //         </div>
         //     </div>
         // </>
-        expect(wrapper.find('.post'));
+        const para = <p className="postText">This is a test</p>;
+        expect(wrapper.find('.post').contains(para)).toBe( true );
     })
 }); 

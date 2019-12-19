@@ -13,7 +13,6 @@ const userFollows = async (userId, newFollowId, callback) => {
     const userFollows = await getUserList(userId, "following");
     const newUserFollows = [...userFollows, newFollowId];
     const newFollowing = await updateItemMerge("profiles", {following: newUserFollows}, userId);
-
     const targetUserList = await getUserList(newFollowId, "followers");
     const newTargetFollowerList = [...targetUserList, userId];
     const updatedTargetFollowers = await updateItemMerge("profiles", {followers: newTargetFollowerList}, newFollowId);

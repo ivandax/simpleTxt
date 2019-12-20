@@ -5,20 +5,23 @@ admin.initializeApp();
 
 const db = admin.firestore();
 
-// exports.alterDummies = functions.firestore
-//     .document('profiles/{posts}')
-//     .onUpdate((change, context) => {
-//         const newData = change.after.data();
-//         const previousData = change.before.data();
+exports.alterDummies = functions.firestore
+    .document('profiles/{posts}')
+    .onUpdate(async (change, context) => {
+        const newData = change.after.data();
+        const previousData = change.before.data();
+        //console.log("new data", newData, newData.id, newData.posts);
+        // console.log("old data", previousData);
 
-//         console.log("new data", newData, newData.id, newData.posts);
-//         console.log("old data", previousData);
+        if(newData.posts > previousData.posts && newData.posts > 10){
+            //console.log("Increased"); //only if user increases.
 
-//         if(newData.posts > previousData.posts){
-//             console.log("Increased");
-//             const posts = db.collection('posts')
-//             .where('profileId', '==', newData.id)
-//             .orderBy('timestamp');
-//             db.collection('trials').add({content: posts});
-//         }
-//     });
+            const querySnap = await db.collection('posts')
+            .where('profileId', '==', newData.id)
+            .orderBy('timestamp').limit(1).get();
+
+            if(querySnap){
+                querySnap.docs[0].ref.delete();
+            }
+        }
+    });

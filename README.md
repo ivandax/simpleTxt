@@ -14,6 +14,10 @@ This app allows users to create their accounts, log in, and start making short, 
 
 The users can go to the "Profile" page to see her/his profile details, and access the "Settings" page to alter their name, bio or profile photo.
 
+### Technologies
+
+![alt text](http://ivandax.com/images/simpletxt/techs.JPG)
+
 ### UML Diagram
 
 User interaction with SimpleTxt:

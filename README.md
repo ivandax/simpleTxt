@@ -1,3 +1,57 @@
+### SimpleTxt
+
+![alt text](http://ivandax.com/images/simpletxt/logo.JPG)
+
+Go to Simpletxt! (https://simpletxt-post.firebaseapp.com/)
+
+## Social Media App focusing on simple text posting.
+
+Have you ever felt overwhelmed by the amount of content that traditional social media apps like Facebook and Twitter show you? Me too. SimpleTxt focuses on plain-old text for user interactions. A microblogging app, very easy and straightforward to enjoy, sign up now!
+
+### Functional Description
+
+This app allows users to create their accounts, log in, and start making short, 150 character posts on their timelines. The user can go to the "Search" page to find other available users and "follow" them. Doing so will add their posts to the user's timeline. The user can make new posts, "Like" posts made by other users, and reply to those posts. Follower, following, likes and post counts are updated in real time.
+
+The users can go to the "Profile" page to see her/his profile details, and access the "Settings" page to alter their name, bio or profile photo.
+
+### UML Diagram
+
+User interaction with SimpleTxt:
+
+![alt text](http://ivandax.com/images/simpletxt/functional.JPG)
+
+### Technical Description
+
+Data Model
+
+In the diagram below we can see the schemas used:
+
+![alt text](http://ivandax.com/images/simpletxt/dataModel.JPG)
+
+## DESIGN (screenshots)
+
+Welcome Page:
+
+![alt text](http://ivandax.com/images/simpletxt/welcome1.JPG)
+
+Home Page on Desktop:
+
+![alt text](http://ivandax.com/images/simpletxt/homeDesktop.JPG)
+
+Home Page on Mobile:
+
+![alt text](http://ivandax.com/images/simpletxt/HomeMobile.JPG)
+
+Search Page on Mobile:
+
+![alt text](http://ivandax.com/images/simpletxt/searchMobile.JPG)
+
+Profile Page on Desktop:
+
+![alt text](http://ivandax.com/images/simpletxt/ProfileDesktop.JPG)
+
+## Development info:
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
